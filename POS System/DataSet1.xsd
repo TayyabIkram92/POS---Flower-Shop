@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ShopConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ShopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.POS_System.Properties.Settings.GlobalReference.Default.ShopConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemsInfoTableAdapter" GeneratorDataComponentClassName="ItemsInfoTableAdapter" Name="ItemsInfo" UserDataComponentName="ItemsInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ShopConnectionString1 (Settings)" DbObjectName="dbo.ItemsInfo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ItemCode, ItemDescription, ItemCatName, ItemSubCatName, ItemQty, PurchaseRate, SaleRate FROM dbo.ItemsInfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemCode" DataSetColumn="ItemCode" />
+              <Mapping SourceColumn="ItemDescription" DataSetColumn="ItemDescription" />
+              <Mapping SourceColumn="ItemCatName" DataSetColumn="ItemCatName" />
+              <Mapping SourceColumn="ItemSubCatName" DataSetColumn="ItemSubCatName" />
+              <Mapping SourceColumn="ItemQty" DataSetColumn="ItemQty" />
+              <Mapping SourceColumn="PurchaseRate" DataSetColumn="PurchaseRate" />
+              <Mapping SourceColumn="SaleRate" DataSetColumn="SaleRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ItemsInfo" msprop:Generator_TableClassName="ItemsInfoDataTable" msprop:Generator_TableVarName="tableItemsInfo" msprop:Generator_TablePropName="ItemsInfo" msprop:Generator_RowDeletingName="ItemsInfoRowDeleting" msprop:Generator_RowChangingName="ItemsInfoRowChanging" msprop:Generator_RowEvHandlerName="ItemsInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="ItemsInfoRowDeleted" msprop:Generator_UserTableName="ItemsInfo" msprop:Generator_RowChangedName="ItemsInfoRowChanged" msprop:Generator_RowEvArgName="ItemsInfoRowChangeEvent" msprop:Generator_RowClassName="ItemsInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemDescription" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_UserColumnName="ItemDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCatName" msprop:Generator_ColumnVarNameInTable="columnItemCatName" msprop:Generator_ColumnPropNameInRow="ItemCatName" msprop:Generator_ColumnPropNameInTable="ItemCatNameColumn" msprop:Generator_UserColumnName="ItemCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemSubCatName" msprop:Generator_ColumnVarNameInTable="columnItemSubCatName" msprop:Generator_ColumnPropNameInRow="ItemSubCatName" msprop:Generator_ColumnPropNameInTable="ItemSubCatNameColumn" msprop:Generator_UserColumnName="ItemSubCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemQty" msprop:Generator_ColumnVarNameInTable="columnItemQty" msprop:Generator_ColumnPropNameInRow="ItemQty" msprop:Generator_ColumnPropNameInTable="ItemQtyColumn" msprop:Generator_UserColumnName="ItemQty" type="xs:double" minOccurs="0" />
+              <xs:element name="PurchaseRate" msprop:Generator_ColumnVarNameInTable="columnPurchaseRate" msprop:Generator_ColumnPropNameInRow="PurchaseRate" msprop:Generator_ColumnPropNameInTable="PurchaseRateColumn" msprop:Generator_UserColumnName="PurchaseRate" type="xs:double" minOccurs="0" />
+              <xs:element name="SaleRate" msprop:Generator_ColumnVarNameInTable="columnSaleRate" msprop:Generator_ColumnPropNameInRow="SaleRate" msprop:Generator_ColumnPropNameInTable="SaleRateColumn" msprop:Generator_UserColumnName="SaleRate" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

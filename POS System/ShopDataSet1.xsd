@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ShopDataSet1" targetNamespace="http://tempuri.org/ShopDataSet1.xsd" xmlns:mstns="http://tempuri.org/ShopDataSet1.xsd" xmlns="http://tempuri.org/ShopDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ShopConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ShopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.POS_System.Properties.Settings.GlobalReference.Default.ShopConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GrossProfitReportTableAdapter" GeneratorDataComponentClassName="GrossProfitReportTableAdapter" Name="GrossProfitReport" UserDataComponentName="GrossProfitReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ShopConnectionString1 (Settings)" DbObjectName="dbo.GrossProfitReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SaleNo, SaleDate, CustomerDesciption, TotalSale, TotalCost, GrossProfit FROM dbo.GrossProfitReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SaleNo" DataSetColumn="SaleNo" />
+              <Mapping SourceColumn="SaleDate" DataSetColumn="SaleDate" />
+              <Mapping SourceColumn="CustomerDesciption" DataSetColumn="CustomerDesciption" />
+              <Mapping SourceColumn="TotalSale" DataSetColumn="TotalSale" />
+              <Mapping SourceColumn="TotalCost" DataSetColumn="TotalCost" />
+              <Mapping SourceColumn="GrossProfit" DataSetColumn="GrossProfit" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ShopDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ShopDataSet1" msprop:Generator_UserDSName="ShopDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GrossProfitReport" msprop:Generator_TableClassName="GrossProfitReportDataTable" msprop:Generator_TableVarName="tableGrossProfitReport" msprop:Generator_TablePropName="GrossProfitReport" msprop:Generator_RowDeletingName="GrossProfitReportRowDeleting" msprop:Generator_RowChangingName="GrossProfitReportRowChanging" msprop:Generator_RowEvHandlerName="GrossProfitReportRowChangeEventHandler" msprop:Generator_RowDeletedName="GrossProfitReportRowDeleted" msprop:Generator_UserTableName="GrossProfitReport" msprop:Generator_RowChangedName="GrossProfitReportRowChanged" msprop:Generator_RowEvArgName="GrossProfitReportRowChangeEvent" msprop:Generator_RowClassName="GrossProfitReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SaleNo" msprop:Generator_ColumnVarNameInTable="columnSaleNo" msprop:Generator_ColumnPropNameInRow="SaleNo" msprop:Generator_ColumnPropNameInTable="SaleNoColumn" msprop:Generator_UserColumnName="SaleNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SaleDate" msprop:Generator_ColumnVarNameInTable="columnSaleDate" msprop:Generator_ColumnPropNameInRow="SaleDate" msprop:Generator_ColumnPropNameInTable="SaleDateColumn" msprop:Generator_UserColumnName="SaleDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomerDesciption" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomerDesciption" msprop:Generator_ColumnPropNameInRow="CustomerDesciption" msprop:Generator_ColumnPropNameInTable="CustomerDesciptionColumn" msprop:Generator_UserColumnName="CustomerDesciption" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalSale" msprop:Generator_ColumnVarNameInTable="columnTotalSale" msprop:Generator_ColumnPropNameInRow="TotalSale" msprop:Generator_ColumnPropNameInTable="TotalSaleColumn" msprop:Generator_UserColumnName="TotalSale" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:double" minOccurs="0" />
+              <xs:element name="GrossProfit" msprop:Generator_ColumnVarNameInTable="columnGrossProfit" msprop:Generator_ColumnPropNameInRow="GrossProfit" msprop:Generator_ColumnPropNameInTable="GrossProfitColumn" msprop:Generator_UserColumnName="GrossProfit" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
