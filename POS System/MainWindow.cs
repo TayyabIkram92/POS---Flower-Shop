@@ -657,7 +657,7 @@ namespace POS_System
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleReportViewer s = new SaleReportViewer();
-            CrystalReport6 rpt = new CrystalReport6();
+            CrystalReports.CrystalReport6 rpt = new CrystalReports.CrystalReport6();
             SqlDataAdapter sda = new SqlDataAdapter("select * from ItemsInfo", con);
             DataSet ds = new DataSet();
             sda.Fill(ds, "ItemsInfo");
@@ -675,7 +675,7 @@ namespace POS_System
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleReportViewer s = new SaleReportViewer();
-            CrystalReport7 rpt = new CrystalReport7();
+            CrystalReports.CrystalReport7 rpt = new CrystalReports.CrystalReport7();
             SqlDataAdapter sda = new SqlDataAdapter("Select dbo.Customers.CustomerID, dbo.Customers.CustomerCode, dbo.Customers.CustomerEnglishName, dbo.Customers.CustomerUrduName, dbo.Customers.CustomerAddress, dbo.Customers.CustomerPhone1, dbo.Customers.CustomerPhone2, dbo.Areas.AreaName as CustomerArea, dbo.Customers.CreditLimit, dbo.Customers.Discount, dbo.Customers.SaleRate, dbo.Customers.CustomerBalance, dbo.Customers.AccountOpeningDate from dbo.Customers INNER JOIN dbo.Areas ON dbo.Customers.CustomerArea = dbo.Areas.AreaCode", con);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Customers");
@@ -693,7 +693,7 @@ namespace POS_System
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleReportViewer s = new SaleReportViewer();
-            CrystalReport8 rpt = new CrystalReport8();
+            CrystalReports.CrystalReport8 rpt = new CrystalReports.CrystalReport8();
             SqlDataAdapter sda = new SqlDataAdapter("Select dbo.Suppliers.SupplierID, dbo.Suppliers.SupplierCode, dbo.Suppliers.SupplierEnglishName, dbo.Suppliers.SupplierUrduName, dbo.Suppliers.SupplierAddress, dbo.Suppliers.SupplierPhone1, dbo.Suppliers.SupplierPhone2, dbo.Areas.AreaName as SupplierArea, dbo.Suppliers.SupplierBalance, dbo.Suppliers.AccountOpeningDate from dbo.Suppliers INNER JOIN dbo.Areas ON dbo.Suppliers.SupplierArea = dbo.Areas.AreaCode", con);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Suppliers");

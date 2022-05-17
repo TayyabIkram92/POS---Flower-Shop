@@ -83,7 +83,7 @@ namespace POS_System
         private void button4_Click(object sender, EventArgs e)
         {
             SaleReportViewer s = new SaleReportViewer();
-            CrystalReport2 rpt = new CrystalReport2();
+            CrystalReports.CrystalReport2 rpt = new CrystalReports.CrystalReport2();
             SqlDataAdapter sda = new SqlDataAdapter("select SaleNo,format(SaleDate,'dd/MM/yyyy'),CustomerDesciption,TotalSale,TotalCost,GrossProfit from GrossProfitReport where SaleDate between @a and @b", con);
             sda.SelectCommand.Parameters.AddWithValue("@a", dateTimePicker1.Value);
             sda.SelectCommand.Parameters.AddWithValue("@b", dateTimePicker2.Value);

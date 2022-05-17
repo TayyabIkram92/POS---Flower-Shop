@@ -344,7 +344,7 @@ namespace POS_System
                             }
                         }
                         SaleReportViewer sz = new SaleReportViewer();
-                        TilesSaleReport rptz = new TilesSaleReport();
+                        CrystalReports.TilesSaleReport rptz = new CrystalReports.TilesSaleReport();
                         SqlDataAdapter sdaz = new SqlDataAdapter("select * from saledataset", con);
                         DataSet dsz = new DataSet();
                         sdaz.Fill(dsz, "saledataset");
@@ -507,7 +507,7 @@ namespace POS_System
                             }
                         }
                         SaleReportViewer s = new SaleReportViewer();
-                        TilesSaleReport rpt = new TilesSaleReport();
+                        CrystalReports.TilesSaleReport rpt = new CrystalReports.TilesSaleReport();
                         SqlDataAdapter sda = new SqlDataAdapter("select * from saledataset", con);
                         DataSet ds = new DataSet();
                         sda.Fill(ds, "saledataset");

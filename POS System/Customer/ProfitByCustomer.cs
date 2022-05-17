@@ -117,7 +117,7 @@ namespace POS_System
             else
             {
                 SaleReportViewer s = new SaleReportViewer();
-                CrystalReport2 rpt = new CrystalReport2();
+                CrystalReports.CrystalReport2 rpt = new CrystalReports.CrystalReport2();
                 SqlDataAdapter sda = new SqlDataAdapter("select SaleNo,format(SaleDate,'dd/MM/yyyy'),CustomerDesciption,TotalSale,TotalCost,GrossProfit from GrossProfitReport where SaleDate between @a and @b and SUBSTRING(CustomerDesciption,0,CHARINDEX('-',CustomerDesciption,0))=@c", con);
                 sda.SelectCommand.Parameters.AddWithValue("@a", dateTimePicker1.Value);
                 sda.SelectCommand.Parameters.AddWithValue("@b", dateTimePicker2.Value);

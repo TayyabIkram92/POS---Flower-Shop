@@ -204,7 +204,7 @@ namespace POS_System
             else
             {
                 SaleReportViewer s = new SaleReportViewer();
-                CrystalReport3 rpt = new CrystalReport3();
+                CrystalReports.CrystalReport3 rpt = new CrystalReports.CrystalReport3();
                 SqlDataAdapter sda = new SqlDataAdapter("select CustomerCode,VouncherNo,Date as Date_,Narration,Amount as Debit,0 as Credit from CashPaymentVounchers where Date between @a and @b and CustomerCode=@c UNION select CustomerCode, VouncherNo, Date as Date_, Narration, 0 as Debit, Amount as Credit from CashReceiptVounchers where Date between @a and @b and CustomerCode=@c UNION select CustomerCode, 'SAL-'+SaleNo as SaleNo, SaleDate as Date_, SaleDescription, SaleAmount as Debit, 0 as Credit from Sale where SaleDate between @a and @b and CustomerCode=@c UNION select CustomerCode, 'SAL-'+SaleNo as SaleNo, SaleDate as Date_, SaleDescription, 0 as Debit, ReceivedAmount as Credit from Sale where SaleDate between @a and @b and CustomerCode=@c order by Date_", con);
                 sda.SelectCommand.Parameters.AddWithValue("@a", dateTimePicker1.Value);
                 sda.SelectCommand.Parameters.AddWithValue("@b", dateTimePicker2.Value);

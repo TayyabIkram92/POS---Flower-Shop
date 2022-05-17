@@ -133,7 +133,7 @@ namespace POS_System
         private void button4_Click(object sender, EventArgs e)
         {
             SaleReportViewer s = new SaleReportViewer();
-            CrystalReport5 rpt = new CrystalReport5();
+            CrystalReports.CrystalReport5 rpt = new CrystalReports.CrystalReport5();
             if (cboarea.Text == "All")
             {
                 SqlDataAdapter sda = new SqlDataAdapter("Select CustomerUrduName, CustomerBalance from Customers where CustomerBalance > 0 UNION Select SupplierUrduName,SupplierBalance from Suppliers where SupplierBalance<0", con);

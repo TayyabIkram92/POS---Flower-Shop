@@ -201,7 +201,7 @@ namespace POS_System
                 }
             }
             SaleReportViewer s = new SaleReportViewer();
-            CrystalReport4 rpt = new CrystalReport4();
+            CrystalReports.CrystalReport4 rpt = new CrystalReports.CrystalReport4();
             SqlDataAdapter sda = new SqlDataAdapter("select * from StockOutInfo", con);
             sda.SelectCommand.Parameters.AddWithValue("@a", dateTimePicker1.Value);
             sda.SelectCommand.Parameters.AddWithValue("@b", dateTimePicker2.Value);

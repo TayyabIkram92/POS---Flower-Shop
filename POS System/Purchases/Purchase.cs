@@ -375,7 +375,7 @@ namespace POS_System
                         con.Close();
                         MessageBox.Show("Purchase Info Saved Successfully");
                         //SaleReportViewer s = new SaleReportViewer();
-                        CrystalReport1 rpt = new CrystalReport1();
+                        CrystalReports.CrystalReport1 rpt = new CrystalReports.CrystalReport1();
                         SqlDataAdapter sda = new SqlDataAdapter("select * from saledataset", con);
                         DataSet ds = new DataSet();
                         sda.Fill(ds, "saledataset");
@@ -453,7 +453,7 @@ namespace POS_System
                             MessageBox.Show(exp.ToString());
                         }
                     }//SaleReportViewer s = new SaleReportViewer();
-                    CrystalReport1 rpt = new CrystalReport1();
+                    CrystalReports.CrystalReport1 rpt = new CrystalReports.CrystalReport1();
                     SqlDataAdapter sda = new SqlDataAdapter("select * from saledataset", con);
                     DataSet ds = new DataSet();
                     sda.Fill(ds, "saledataset");
